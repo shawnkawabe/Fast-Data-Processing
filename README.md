@@ -1,2 +1,2 @@
 # Fast-Data-Processing
-Feito para polpar tempo no processamento de dados.
+Feito para poupar tempo no processamento de dados.
