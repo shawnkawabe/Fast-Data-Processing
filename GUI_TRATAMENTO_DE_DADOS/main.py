@@ -24,18 +24,18 @@ Check_Change_1.config(font=('Consolas',10),bg='#282A36',fg='#50FA7B')
 
 chk2 = False
 Check_Change_2 = Checkbutton(main_window,text="replace ' ' to ''", variable = chk2 )
-Check_Change_1.grid(column=1,row=3)
-Check_Change_1.config(font=('Consolas',10),bg='#282A36',fg='#50FA7B')
+Check_Change_2.grid(column=2,row=3)
+Check_Change_2.config(font=('Consolas',10),bg='#282A36',fg='#50FA7B')
 
 chk3 = False
-Check_Change_1 = Checkbutton(main_window,text="replace ',' to '.'", variable = chk1 )
-Check_Change_1.grid(column=1,row=3)
-Check_Change_1.config(font=('Consolas',10),bg='#282A36',fg='#50FA7B')
+Check_Change_3 = Checkbutton(main_window,text="replace '\N'", variable = chk3 )
+Check_Change_3.grid(column=1,row=4)
+Check_Change_3.config(font=('Consolas',10),bg='#282A36',fg='#50FA7B')
 
-chk1 = False
-Check_Change_1 = Checkbutton(main_window,text="replace ',' to '.'", variable = chk1 )
-Check_Change_1.grid(column=1,row=3)
-Check_Change_1.config(font=('Consolas',10),bg='#282A36',fg='#50FA7B')
+chk4 = False
+Check_Change_4 = Checkbutton(main_window,text="replace '\T'", variable = chk4 )
+Check_Change_4.grid(column=2,row=4)
+Check_Change_4.config(font=('Consolas',10),bg='#282A36',fg='#50FA7B')
 
 Entry_Data_Name  = Entry(main_window)
 Entry_Data_Name.grid(column=2,row=1,padx=20,pady=20)
