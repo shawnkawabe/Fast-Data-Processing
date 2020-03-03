@@ -67,7 +67,10 @@ main_window.config(bg='#282A36')
 
 main_window.mainloop()
 if __name__ == "__main__":
-    
+	def getconditions():
+		conditionall = chkall.getstate()
+		if conditionall==1:
+		
     
     print('ok')    
     
