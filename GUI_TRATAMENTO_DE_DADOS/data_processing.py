@@ -1,5 +1,5 @@
 #import function(classes,def)
-import CreateList from List
+from List import CreateList
 #import packages
 import os 
 
@@ -11,7 +11,8 @@ class dataprocess():
 		self.lines = lines
             
 	def read(self):
-        document = open(''+self.name+'','r')
+		
+        document = open(''+self.name+".dat",'r')
         document = document.readlines()
         self.document = document
         process(self.document)
@@ -19,19 +20,9 @@ class dataprocess():
         
 	def process(self):
 		doc = self.document
-		docp = ""
-		docl = []
-		CreateList.newList(self.name,self.numberlines)
+		data_receive = CreateList.newList(self.name, )
 
-	
-		for i in range(len(doc)):			docp+=doc[i]
-    
-		for i in range(len(doc)):
-			docl.append(doc[i].replace('\n','').replace(' ','').split('\t'))
-    
-		for i in range(len(docl)):
-			for d in range(len(docl[i])):
-				docl[i][d] = docl[i][d].replace(',','.')
-		docl.pop(-1)
-		docl.pop(-1)
+		
+
+		
 
