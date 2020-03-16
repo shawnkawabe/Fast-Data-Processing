@@ -14,42 +14,39 @@ if __name__ == "__main__":
 			self.name = Entry_Data_Name.get()
 			self.numberlines = Entry_NumberLines.get()
 			self.lines = Entry_ChoseLines.get()
+			self.doc = doc
 
-		def getconditions(doc):
+		def getconditions(self,doc):
 			
 			if chkall==1:
 				for i in range(len(doc)):
-				docl.append(doc[i].replace('\n','').replace(' ','').split('\t'))
+					doc.append(doc[i].replace('\n','').replace(' ','').split('\t'))
     
-				for i in range(len(docl)):
-					for d in range(len(docl[i])):
-					docl[i][d] = docl[i][d].replace(',','.')
-				docl.pop(-1)
-				docl.pop(-1)
+				for i in range(len(doc)):
+					for d in range(len(doc[i])):
+						docl[i][d] = doc[i][d].replace(',','.')
 
 			elif chk1 == 1 or chk2 == 1 or chk3 == 1 or chk4 == 1:
 				if chk1 == 1:
-
+					input()
 			elif chk1 == 1 and chk2 == 1 and chk3 == 1 and chk4 == 1:
-
+				input()
 			elif chk1 == 1 and chk2 == 1 and chk3 == 1 and chk4 == 1:
-
-			elif chk1 	
+				input()
 			for i in range(len(doc)):
-			docp+=doc[i]
+				docp+=doc[i]
 		
 			for i in range(len(doc)):
-				docl.append(doc[i].replace('\n','').replace(' ','').split('\t'))
+				doc.append(doc[i].replace('\n','').replace(' ','').split('\t'))
     
-			for i in range(len(docl)):
-				for d in range(len(docl[i])):
-				docl[i][d] = docl[i][d].replace(',','.')
-			docl.pop(-1)
-			docl.pop(-1)
+			for i in range(len(doc)):
+				for d in range(len(doc[i])):
+					docl[i][d] = doc[i][d].replace(',','.')
+			
 
-    def process_data_btn():
-		data_processing.read(Entry_Data_Name.get())
-		dataroute.getconditions()
+   		def process_data_btn(self,doc):
+			self.doc = data_processing.read(Entry_Data_Name.get())
+			dataroute.getconditions(self.doc)
 	
 	main_window = Tk()
 	main_window.title('Fast Data Processing')
@@ -111,6 +108,5 @@ if __name__ == "__main__":
 	Entry_Data_Name.config(width ='36',fg='#50FA7B',bg='#282A36',font=('Consolas',10) )
 	main_window.config(bg='#282A36')
 	main_window.mainloop()
-    print() 
     
     

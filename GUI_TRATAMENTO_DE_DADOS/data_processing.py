@@ -4,17 +4,16 @@ from List import CreateList
 import os 
 
 class dataprocess():
-    
 	def __init__(self,name,numberlines,lines):
 		self.name = name
 		self.numberlines  = numberlines
 		self.lines = lines
-            
+		self.document = document  
+      
 	def read(self):
-		
-        document = open(''+self.name+".dat",'r')
-        document = document.readlines()
+        	self.document = open(""+self.name+".dat","r")
         self.document = document
+        document = document.readlines()
         process(self.document)
         document.close()
         
